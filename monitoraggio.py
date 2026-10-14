@@ -16,3 +16,16 @@ def stampa_riepilogo(aeromobili):
 
 
 stampa_riepilogo(aeromobili)
+
+def verifica_controlli_sogliaOre(aeromobili):
+    print("\nVerifica controlli")
+    for a in aeromobili:
+        if a["ore_volo"] > SOGLIA_ORE:
+            print(f'{a["codice"]} - {a["modello"]} ha superato la soglia di {SOGLIA_ORE} ore.')
+
+
+def verifica_controlli_ok(aeromobili):
+    print("\nVerifica controlli OK")
+    for a in aeromobili:
+        if not a["controlli_ok"]:
+            print(f'{a["codice"]} - {a["modello"]} non ha superato i controlli.')
