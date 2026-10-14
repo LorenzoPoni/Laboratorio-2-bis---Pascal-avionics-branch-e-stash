@@ -7,3 +7,12 @@ aeromobili = [
     {"codice": "I-LMN", "modello": "A319", "ore_volo": 430, "controlli_ok": True},
     {"codice": "I-OPQ", "modello": "E190", "ore_volo": 1105, "controlli_ok": False},
 ]
+
+def stampa_riepilogo(aeromobili):
+    print("Riepilogo flotta")
+    for a in aeromobili:
+        stato = "OK" if a["controlli_ok"] else "NON VALIDI"
+        print(f'{a["codice"]:<6} {a["modello"]:<6} {a["ore_volo"]:>6} h  controlli: {stato}')
+
+
+stampa_riepilogo(aeromobili)
